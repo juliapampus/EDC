@@ -20,7 +20,7 @@ import de.fraunhofer.iais.eis.DynamicAttributeToken;
 import de.fraunhofer.iais.eis.Message;
 import de.fraunhofer.iais.eis.util.TypedLiteral;
 import okhttp3.OkHttpClient;
-import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.message.MultipartMessageProcessedResponse;
+import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.message.MultipartResponse;
 import org.eclipse.dataspaceconnector.ids.spi.transform.IdsTransformerRegistry;
 import org.eclipse.dataspaceconnector.ids.transform.IdsProtocol;
 import org.eclipse.dataspaceconnector.spi.iam.IdentityService;
@@ -35,7 +35,7 @@ import java.util.Collections;
  * IdsMultipartSender implementation for contract rejections. Sends IDS ContractRequestMessages and
  * expects an IDS RequestInProcessMessage as the response.
  */
-public class MultipartContractRejectionSender extends IdsMultipartSender<ContractRejection, MultipartMessageProcessedResponse> {
+public class MultipartContractRejectionSender extends IdsMultipartSender<ContractRejection, MultipartResponse<String>> {
 
     public MultipartContractRejectionSender(@NotNull String connectorId,
                                             @NotNull OkHttpClient httpClient,
@@ -76,16 +76,13 @@ public class MultipartContractRejectionSender extends IdsMultipartSender<Contrac
     }
 
     @Override
-    protected MultipartMessageProcessedResponse getResponseContent(IdsMultipartParts parts) throws Exception {
+    protected MultipartResponse<String> getResponseContent(IdsMultipartParts parts) throws Exception {
         Message header = getObjectMapper().readValue(parts.getHeader(), Message.class);
         String payload = null;
         if (parts.getPayload() != null) {
             payload = new String(parts.getPayload().readAllBytes());
         }
 
-        return MultipartMessageProcessedResponse.Builder.newInstance()
-                .header(header)
-                .payload(payload)
-                .build();
+        return new MultipartResponse<>(header, payload);
     }
 }

@@ -20,7 +20,7 @@ import de.fraunhofer.iais.eis.DynamicAttributeToken;
 import de.fraunhofer.iais.eis.Message;
 import de.fraunhofer.iais.eis.RequestInProcessMessage;
 import okhttp3.OkHttpClient;
-import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.message.MultipartRequestInProcessResponse;
+import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.message.MultipartResponse;
 import org.eclipse.dataspaceconnector.ids.spi.IdsId;
 import org.eclipse.dataspaceconnector.ids.spi.IdsType;
 import org.eclipse.dataspaceconnector.ids.spi.spec.extension.ArtifactRequestMessagePayload;
@@ -44,7 +44,7 @@ import static org.eclipse.dataspaceconnector.ids.spi.IdsConstants.IDS_WEBHOOK_AD
  * IdsMultipartSender implementation for data requests. Sends IDS ArtifactRequestMessages and
  * expects an IDS RequestInProcessMessage as the response.
  */
-public class MultipartArtifactRequestSender extends IdsMultipartSender<DataRequest, MultipartRequestInProcessResponse> {
+public class MultipartArtifactRequestSender extends IdsMultipartSender<DataRequest, MultipartResponse<String>> {
 
     private final Vault vault;
     private final String idsWebhookAddress;
@@ -129,7 +129,7 @@ public class MultipartArtifactRequestSender extends IdsMultipartSender<DataReque
     }
 
     @Override
-    protected MultipartRequestInProcessResponse getResponseContent(IdsMultipartParts parts) throws Exception {
+    protected MultipartResponse<String> getResponseContent(IdsMultipartParts parts) throws Exception {
         Message header = getObjectMapper().readValue(parts.getHeader(), Message.class);
         String payload = null;
         if (parts.getPayload() != null) {
@@ -142,9 +142,6 @@ public class MultipartArtifactRequestSender extends IdsMultipartSender<DataReque
             // TODO Update TransferProcess State Machine
         }
 
-        return MultipartRequestInProcessResponse.Builder.newInstance()
-                .header(header)
-                .payload(payload)
-                .build();
+        return new MultipartResponse<>(header, payload);
     }
 }

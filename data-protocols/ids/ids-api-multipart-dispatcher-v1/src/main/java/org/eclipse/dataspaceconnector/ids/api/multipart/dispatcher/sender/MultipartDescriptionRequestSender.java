@@ -27,7 +27,7 @@ import de.fraunhofer.iais.eis.Resource;
 import de.fraunhofer.iais.eis.ResourceCatalog;
 import de.fraunhofer.iais.eis.ResponseMessage;
 import okhttp3.OkHttpClient;
-import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.message.MultipartDescriptionResponse;
+import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.message.MultipartResponse;
 import org.eclipse.dataspaceconnector.ids.spi.transform.IdsTransformerRegistry;
 import org.eclipse.dataspaceconnector.ids.transform.IdsProtocol;
 import org.eclipse.dataspaceconnector.spi.EdcException;
@@ -43,7 +43,7 @@ import java.util.Collections;
  * IdsMultipartSender implementation for metadata requests. Sends IDS DescriptionRequestMessages and
  * expects an IDS DescriptionResponseMessage as the response.
  */
-public class MultipartDescriptionRequestSender extends IdsMultipartSender<MetadataRequest, MultipartDescriptionResponse> {
+public class MultipartDescriptionRequestSender extends IdsMultipartSender<MetadataRequest, MultipartResponse<ModelClass>> {
 
     public MultipartDescriptionRequestSender(@NotNull String connectorId,
                                              @NotNull OkHttpClient httpClient,
@@ -78,7 +78,7 @@ public class MultipartDescriptionRequestSender extends IdsMultipartSender<Metada
     }
 
     @Override
-    protected MultipartDescriptionResponse getResponseContent(IdsMultipartParts parts) throws Exception {
+    protected MultipartResponse<ModelClass> getResponseContent(IdsMultipartParts parts) throws Exception {
         ObjectMapper objectMapper = getObjectMapper();
 
         ResponseMessage header = objectMapper.readValue(parts.getHeader(), ResponseMessage.class);
@@ -109,9 +109,6 @@ public class MultipartDescriptionRequestSender extends IdsMultipartSender<Metada
             }
         }
 
-        return MultipartDescriptionResponse.Builder.newInstance()
-                .header(header)
-                .payload(payload)
-                .build();
+        return new MultipartResponse<>(header, payload);
     }
 }
