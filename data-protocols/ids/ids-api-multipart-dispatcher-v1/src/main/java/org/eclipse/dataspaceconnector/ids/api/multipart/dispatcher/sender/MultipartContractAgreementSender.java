@@ -35,6 +35,7 @@ import org.jetbrains.annotations.NotNull;
 import java.net.URI;
 import java.util.Collections;
 
+import static org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.util.ResponseUtil.parseMultipartStringResponse;
 import static org.eclipse.dataspaceconnector.ids.spi.IdsConstants.IDS_WEBHOOK_ADDRESS_PROPERTY;
 
 /**
@@ -104,13 +105,7 @@ public class MultipartContractAgreementSender extends IdsMultipartSender<Contrac
 
     @Override
     protected MultipartResponse<String> getResponseContent(IdsMultipartParts parts) throws Exception {
-        var header = getObjectMapper().readValue(parts.getHeader(), Message.class);
-        String payload = null;
-        if (parts.getPayload() != null) {
-            payload = new String(parts.getPayload().readAllBytes());
-        }
-
-        return new MultipartResponse<>(header, payload);
+        return parseMultipartStringResponse(parts, getObjectMapper());
     }
 
 
