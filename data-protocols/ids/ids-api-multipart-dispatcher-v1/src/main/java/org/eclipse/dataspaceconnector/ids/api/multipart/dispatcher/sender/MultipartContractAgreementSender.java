@@ -35,7 +35,7 @@ import org.jetbrains.annotations.NotNull;
 import java.net.URI;
 import java.util.Collections;
 
-import static org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.util.ResponseUtil.parseMultipartStringResponse;
+import static org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.sender.util.ResponseUtil.parseMultipartStringResponse;
 import static org.eclipse.dataspaceconnector.ids.spi.IdsConstants.IDS_WEBHOOK_ADDRESS_PROPERTY;
 
 /**
@@ -67,7 +67,7 @@ public class MultipartContractAgreementSender extends IdsMultipartSender<Contrac
     protected String retrieveRemoteConnectorAddress(ContractAgreementRequest request) {
         return request.getConnectorAddress();
     }
-    
+
     /**
      * Builds a {@link de.fraunhofer.iais.eis.ContractAgreementMessage} for the given {@link ContractAgreementRequest}.
      *
@@ -99,7 +99,7 @@ public class MultipartContractAgreementSender extends IdsMultipartSender<Contrac
 
         return message;
     }
-    
+
     /**
      * Builds the payload for the agreement request. The payload contains the {@link ContractAgreement}.
      *
@@ -117,7 +117,7 @@ public class MultipartContractAgreementSender extends IdsMultipartSender<Contrac
         var idsContractAgreement = transformationResult.getContent();
         return getObjectMapper().writeValueAsString(idsContractAgreement);
     }
-    
+
     /**
      * Parses the response content.
      *

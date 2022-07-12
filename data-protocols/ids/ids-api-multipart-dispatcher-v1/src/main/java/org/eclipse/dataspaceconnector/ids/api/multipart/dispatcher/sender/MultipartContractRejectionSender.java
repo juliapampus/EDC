@@ -32,7 +32,7 @@ import org.jetbrains.annotations.NotNull;
 import java.net.URI;
 import java.util.Collections;
 
-import static org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.util.ResponseUtil.parseMultipartStringResponse;
+import static org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.sender.util.ResponseUtil.parseMultipartStringResponse;
 
 /**
  * IdsMultipartSender implementation for contract rejections. Sends IDS ContractRequestMessages and
@@ -58,7 +58,7 @@ public class MultipartContractRejectionSender extends IdsMultipartSender<Contrac
     protected String retrieveRemoteConnectorAddress(ContractRejection rejection) {
         return rejection.getConnectorAddress();
     }
-    
+
     /**
      * Builds a {@link de.fraunhofer.iais.eis.ContractRejectionMessage} for the given {@link ContractRejection}.
      *
@@ -79,7 +79,7 @@ public class MultipartContractRejectionSender extends IdsMultipartSender<Contrac
                 ._transferContract_(URI.create(rejection.getCorrelationId()))
                 .build();
     }
-    
+
     /**
      * Builds the payload for the rejection. The payload contains the rejection reason.
      *
@@ -90,7 +90,7 @@ public class MultipartContractRejectionSender extends IdsMultipartSender<Contrac
     protected String buildMessagePayload(ContractRejection rejection) throws Exception {
         return rejection.getRejectionReason();
     }
-    
+
     /**
      * Parses the response content.
      *
