@@ -20,6 +20,7 @@ import de.fraunhofer.iais.eis.ContractRequestBuilder;
 import de.fraunhofer.iais.eis.ContractRequestMessageBuilder;
 import de.fraunhofer.iais.eis.DynamicAttributeToken;
 import de.fraunhofer.iais.eis.Message;
+import de.fraunhofer.iais.eis.RequestInProcessMessageImpl;
 import okhttp3.OkHttpClient;
 import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.sender.response.IdsMultipartParts;
 import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.sender.response.MultipartResponse;
@@ -34,6 +35,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.net.URI;
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 
 import static org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.sender.util.ResponseUtil.parseMultipartStringResponse;
@@ -137,6 +139,11 @@ public class MultipartContractOfferSender extends IdsMultipartSender<ContractOff
     @Override
     protected MultipartResponse<String> getResponseContent(IdsMultipartParts parts) throws Exception {
         return parseMultipartStringResponse(parts, getObjectMapper());
+    }
+
+    @Override
+    protected List<Class<? extends Message>> getAllowedResponseTypes() {
+        return List.of(RequestInProcessMessageImpl.class);
     }
 
     private de.fraunhofer.iais.eis.ContractRequest createContractRequest(ContractOffer offer) {

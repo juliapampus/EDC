@@ -82,7 +82,7 @@ abstract class AbstractMultipartDispatcherIntegrationTest {
         identityService = mock(IdentityService.class);
         when(identityService.obtainClientCredentials(any())).thenReturn(Result.success(tokenResult));
         when(identityService.verifyJwtToken(any(), any())).thenReturn(Result.success(claimToken));
-        
+
         negotiationStore = mock(ContractNegotiationStore.class);
 
         extension.registerSystemExtension(ServiceExtension.class,

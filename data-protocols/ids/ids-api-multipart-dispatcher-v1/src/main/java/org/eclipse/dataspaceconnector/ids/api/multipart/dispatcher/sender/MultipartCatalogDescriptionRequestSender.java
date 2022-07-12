@@ -18,6 +18,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import de.fraunhofer.iais.eis.BaseConnector;
 import de.fraunhofer.iais.eis.DescriptionRequestMessageBuilder;
+import de.fraunhofer.iais.eis.DescriptionResponseMessageImpl;
 import de.fraunhofer.iais.eis.DynamicAttributeToken;
 import de.fraunhofer.iais.eis.Message;
 import de.fraunhofer.iais.eis.Resource;
@@ -130,6 +131,11 @@ public class MultipartCatalogDescriptionRequestSender extends IdsMultipartSender
         }
 
         return new MultipartResponse<>(header, transformResult.getContent());
+    }
+
+    @Override
+    protected List<Class<? extends Message>> getAllowedResponseTypes() {
+        return List.of(DescriptionResponseMessageImpl.class);
     }
 
     private BaseConnector getBaseConnector(ObjectMapper mapper, IdsMultipartParts parts) {

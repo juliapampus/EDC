@@ -27,6 +27,7 @@ import org.eclipse.dataspaceconnector.spi.result.Result;
 import org.eclipse.dataspaceconnector.spi.types.domain.message.RemoteMessage;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -73,6 +74,11 @@ class IdsMultipartSenderTest {
 
         @Override
         protected Object getResponseContent(IdsMultipartParts parts) {
+            return null;
+        }
+
+        @Override
+        protected List<Class<? extends Message>> getAllowedResponseTypes() {
             return null;
         }
     }

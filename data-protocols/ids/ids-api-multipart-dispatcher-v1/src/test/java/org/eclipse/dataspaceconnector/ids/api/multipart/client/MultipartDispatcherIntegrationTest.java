@@ -22,7 +22,6 @@ import de.fraunhofer.iais.eis.DescriptionResponseMessage;
 import de.fraunhofer.iais.eis.MessageProcessedNotificationMessage;
 import de.fraunhofer.iais.eis.MessageProcessedNotificationMessageImpl;
 import de.fraunhofer.iais.eis.PermissionBuilder;
-import de.fraunhofer.iais.eis.RejectionMessage;
 import de.fraunhofer.iais.eis.RequestInProcessMessageImpl;
 import de.fraunhofer.iais.eis.ResponseMessage;
 import org.eclipse.dataspaceconnector.common.util.junit.annotations.ComponentTest;
@@ -178,9 +177,12 @@ class MultipartDispatcherIntegrationTest extends AbstractMultipartDispatcherInte
 
     @Test
     void testSendContractRequestMessage() throws Exception {
-        var contractOffer = ContractOffer.Builder.newInstance().id("id").policy(Policy.Builder.newInstance().build()).build();
-        when(transformerRegistry.transform(any(), any()))
-                .thenReturn(Result.success(getIdsContractOffer()));
+        var policy = Policy.Builder.newInstance().build();
+        var contractOffer = ContractOffer.Builder.newInstance().id("id").policy(policy).build();
+
+        addAsset(Asset.Builder.newInstance().id("1").build());
+
+        when(transformerRegistry.transform(any(), eq(de.fraunhofer.iais.eis.ContractOffer.class))).thenReturn(Result.success(getIdsContractOffer()));
 
         var request = ContractOfferRequest.Builder.newInstance()
                 .type(ContractOfferRequest.Type.INITIAL)
@@ -196,8 +198,7 @@ class MultipartDispatcherIntegrationTest extends AbstractMultipartDispatcherInte
         assertThat(result).isNotNull();
         assertThat(result.getHeader()).isNotNull();
 
-        // TODO Should be RequestInProcess
-        assertThat(result.getHeader()).isInstanceOf(RejectionMessage.class);
+        assertThat(result.getHeader()).isInstanceOf(RequestInProcessMessageImpl.class);
         assertThat(result.getPayload()).isNull();
         verify(transformerRegistry).transform(any(), any());
     }
@@ -268,11 +269,12 @@ class MultipartDispatcherIntegrationTest extends AbstractMultipartDispatcherInte
     }
 
     private de.fraunhofer.iais.eis.ContractOffer getIdsContractOffer() {
-        return new ContractOfferBuilder()
+        return new ContractOfferBuilder(URI.create("urn:contractoffer:1"))
                 ._consumer_(URI.create("consumer"))
                 ._provider_(URI.create("provider"))
                 ._permission_(new PermissionBuilder()
                         ._action_(Action.USE)
+                        ._target_(URI.create("urn:artifact:1"))
                         .build())
                 .build();
     }
