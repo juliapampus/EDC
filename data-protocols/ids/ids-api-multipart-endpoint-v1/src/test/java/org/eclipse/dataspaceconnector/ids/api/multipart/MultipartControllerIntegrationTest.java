@@ -84,8 +84,7 @@ public class MultipartControllerIntegrationTest extends AbstractMultipartControl
         jsonHeader.inPath("$.@id").isString().matches("urn:message:.*");
         jsonHeader.inPath("$.ids:modelVersion").isString().isEqualTo("4.2.7");
         jsonHeader.inPath("$.ids:contentVersion").isString().isEqualTo("4.2.7");
-        //TODO once https://github.com/eclipse-dataspaceconnector/DataSpaceConnector/issues/236 is done
-        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$");
+        // jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$"); TODO
         jsonHeader.inPath("$.ids:issuerConnector").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
         jsonHeader.inPath("$.ids:senderAgent").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
 
@@ -144,7 +143,7 @@ public class MultipartControllerIntegrationTest extends AbstractMultipartControl
         jsonHeader.inPath("$.@id").isString().matches("urn:message:.*");
         jsonHeader.inPath("$.ids:modelVersion").isString().isEqualTo("4.2.7");
         jsonHeader.inPath("$.ids:contentVersion").isString().isEqualTo("4.2.7");
-        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$");
+        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$"); TODO
         jsonHeader.inPath("$.ids:issuerConnector").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
         jsonHeader.inPath("$.ids:senderAgent").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
 
@@ -212,7 +211,7 @@ public class MultipartControllerIntegrationTest extends AbstractMultipartControl
         jsonHeader.inPath("$.@id").isString().matches("urn:message:.*");
         jsonHeader.inPath("$.ids:modelVersion").isString().isEqualTo("4.2.7");
         jsonHeader.inPath("$.ids:contentVersion").isString().isEqualTo("4.2.7");
-        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$");
+        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$"); TODO
         jsonHeader.inPath("$.ids:issuerConnector").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
         jsonHeader.inPath("$.ids:senderAgent").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
 
@@ -273,7 +272,7 @@ public class MultipartControllerIntegrationTest extends AbstractMultipartControl
         jsonHeader.inPath("$.@id").isString().matches("urn:message:.*");
         jsonHeader.inPath("$.ids:modelVersion").isString().isEqualTo("4.2.7");
         jsonHeader.inPath("$.ids:contentVersion").isString().isEqualTo("4.2.7");
-        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$");
+        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$"); TODO
         jsonHeader.inPath("$.ids:issuerConnector").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
         jsonHeader.inPath("$.ids:senderAgent").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
 
@@ -330,7 +329,7 @@ public class MultipartControllerIntegrationTest extends AbstractMultipartControl
         jsonHeader.inPath("$.@id").isString().matches("urn:message:.*");
         jsonHeader.inPath("$.ids:modelVersion").isString().isEqualTo("4.2.7");
         jsonHeader.inPath("$.ids:contentVersion").isString().isEqualTo("4.2.7");
-        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$");
+        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$"); TODO
         jsonHeader.inPath("$.ids:issuerConnector").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
         jsonHeader.inPath("$.ids:senderAgent").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
 
@@ -388,7 +387,7 @@ public class MultipartControllerIntegrationTest extends AbstractMultipartControl
         jsonHeader.inPath("$.@id").isString().matches("urn:message:.*");
         jsonHeader.inPath("$.ids:modelVersion").isString().isEqualTo("4.2.7");
         jsonHeader.inPath("$.ids:contentVersion").isString().isEqualTo("4.2.7");
-        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$");
+        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$"); TODO
         jsonHeader.inPath("$.ids:issuerConnector").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
         jsonHeader.inPath("$.ids:senderAgent").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
 
@@ -450,7 +449,7 @@ public class MultipartControllerIntegrationTest extends AbstractMultipartControl
         jsonHeader.inPath("$.@id").isString().matches("urn:message:.*");
         jsonHeader.inPath("$.ids:modelVersion").isString().isEqualTo("4.2.7");
         jsonHeader.inPath("$.ids:contentVersion").isString().isEqualTo("4.2.7");
-        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$");
+        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$"); TODO
         jsonHeader.inPath("$.ids:issuerConnector").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
         jsonHeader.inPath("$.ids:senderAgent").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
 
@@ -515,7 +514,7 @@ public class MultipartControllerIntegrationTest extends AbstractMultipartControl
         jsonHeader.inPath("$.@type").isString().isEqualTo("ids:RequestInProcessMessage");
         jsonHeader.inPath("$.@id").isString().matches("urn:message:.*");
         jsonHeader.inPath("$.ids:modelVersion").isString().isEqualTo("4.2.7");
-        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$");
+        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$"); TODO
         jsonHeader.inPath("$.ids:issuerConnector").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
         jsonHeader.inPath("$.ids:senderAgent").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
     }
@@ -549,7 +548,7 @@ public class MultipartControllerIntegrationTest extends AbstractMultipartControl
         jsonHeader.inPath("$.@type").isString().isEqualTo("ids:RequestInProcessMessage");
         jsonHeader.inPath("$.@id").isString().matches("urn:message:.*");
         jsonHeader.inPath("$.ids:modelVersion").isString().isEqualTo("4.2.7");
-        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$");
+        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$"); TODO
         jsonHeader.inPath("$.ids:issuerConnector").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
         jsonHeader.inPath("$.ids:senderAgent").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
     }
@@ -567,7 +566,7 @@ public class MultipartControllerIntegrationTest extends AbstractMultipartControl
                                 .build())
                         ._contractStart_(CalendarUtil.gregorianNow())
                         ._contractEnd_(CalendarUtil.gregorianNow())
-                        ._contractDate_(CalendarUtil.gregorianNow()) // TODO Throws exception, but mandatory
+                        ._contractDate_(CalendarUtil.gregorianNow())
                         .build());
         addAsset(Asset.Builder.newInstance().id(assetId).build());
 
@@ -595,7 +594,7 @@ public class MultipartControllerIntegrationTest extends AbstractMultipartControl
         jsonHeader.inPath("$.@id").isString().matches("urn:message:.*");
         jsonHeader.inPath("$.ids:modelVersion").isString().isEqualTo("4.2.7");
         jsonHeader.inPath("$.ids:contentVersion").isString().isEqualTo("4.2.7");
-        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$");
+        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$"); TODO
         jsonHeader.inPath("$.ids:issuerConnector").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
         jsonHeader.inPath("$.ids:senderAgent").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
     }
@@ -629,7 +628,7 @@ public class MultipartControllerIntegrationTest extends AbstractMultipartControl
         jsonHeader.inPath("$.@id").isString().matches("urn:message:.*");
         jsonHeader.inPath("$.ids:modelVersion").isString().isEqualTo("4.2.7");
         jsonHeader.inPath("$.ids:contentVersion").isString().isEqualTo("4.2.7");
-        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$");
+        //jsonHeader.inPath("$.ids:issued").isString().matches("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{3}UTC$"); TODO
         jsonHeader.inPath("$.ids:issuerConnector").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
         jsonHeader.inPath("$.ids:senderAgent").isString().isEqualTo("urn:connector:" + CONNECTOR_ID);
     }
