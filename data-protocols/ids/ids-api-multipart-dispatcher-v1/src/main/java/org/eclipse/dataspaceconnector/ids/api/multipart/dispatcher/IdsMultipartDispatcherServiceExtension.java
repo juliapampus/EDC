@@ -17,6 +17,8 @@ package org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher;
 
 import okhttp3.OkHttpClient;
 import org.eclipse.dataspaceconnector.ids.api.configuration.IdsApiConfiguration;
+import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.sender.DelegateMessageContext;
+import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.sender.IdsMultipartSender;
 import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.sender.MultipartArtifactRequestSender;
 import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.sender.MultipartCatalogDescriptionRequestSender;
 import org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.sender.MultipartContractAgreementSender;
@@ -86,8 +88,10 @@ public class IdsMultipartDispatcherServiceExtension implements ServiceExtension 
 
         var idsWebhookAddress = idsApiConfiguration.getIdsWebhookAddress();
 
+        var messageContext = new DelegateMessageContext(connectorId, httpClient, objectMapper, monitor, identityService, transformerRegistry);
+
         var multipartDispatcher = new IdsMultipartRemoteMessageDispatcher();
-        multipartDispatcher.register(new MultipartArtifactRequestSender(connectorId, httpClient, objectMapper, monitor, vault, identityService, transformerRegistry, idsWebhookAddress));
+        multipartDispatcher.register(new IdsMultipartSender<>(new MultipartArtifactRequestSender(messageContext, idsWebhookAddress, vault)));
         multipartDispatcher.register(new MultipartDescriptionRequestSender(connectorId, httpClient, objectMapper, monitor, identityService, transformerRegistry));
         multipartDispatcher.register(new MultipartContractOfferSender(connectorId, httpClient, objectMapper, monitor, identityService, transformerRegistry, idsWebhookAddress));
         multipartDispatcher.register(new MultipartContractAgreementSender(connectorId, httpClient, objectMapper, monitor, identityService, transformerRegistry, idsWebhookAddress));

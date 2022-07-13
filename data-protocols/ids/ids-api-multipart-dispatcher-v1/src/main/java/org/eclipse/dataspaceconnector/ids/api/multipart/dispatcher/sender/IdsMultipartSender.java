@@ -63,8 +63,7 @@ import static java.util.concurrent.CompletableFuture.failedFuture;
  * @param <M> the RemoteMessage type sent by the subclass.
  * @param <R> the response type returned by the subclass.
  */
-abstract class IdsMultipartSender<M extends RemoteMessage, R> implements IdsMessageSender<M, R> {
-    private static final String TOKEN_SCOPE = "idsc:IDS_CONNECTOR_ATTRIBUTES_ALL";
+public class IdsMultipartSender<M extends RemoteMessage, R> implements IdsMessageSender<M, R> {
     private final URI connectorId;
     private final OkHttpClient httpClient;
     private final ObjectMapper objectMapper;
@@ -72,26 +71,18 @@ abstract class IdsMultipartSender<M extends RemoteMessage, R> implements IdsMess
     private final IdentityService identityService;
     private final IdsTransformerRegistry transformerRegistry;
 
-    protected IdsMultipartSender(@NotNull String connectorId,
-                                 @NotNull OkHttpClient httpClient,
-                                 @NotNull ObjectMapper objectMapper,
-                                 @NotNull Monitor monitor,
-                                 @NotNull IdentityService identityService,
-                                 @NotNull IdsTransformerRegistry transformerRegistry) {
-        this.connectorId = createConnectorIdUri(Objects.requireNonNull(connectorId, "connectorId"));
-        this.httpClient = Objects.requireNonNull(httpClient, "httpClient");
-        this.objectMapper = Objects.requireNonNull(objectMapper, "objectMapper");
-        this.monitor = Objects.requireNonNull(monitor, "monitor");
-        this.identityService = Objects.requireNonNull(identityService, "identityService");
-        this.transformerRegistry = Objects.requireNonNull(transformerRegistry, "transformerRegistry");
+    private final Class<M> messageType;
+
+    private static final String TOKEN_SCOPE = "idsc:IDS_CONNECTOR_ATTRIBUTES_ALL";
+
+    public IdsMultipartSender(@NotNull MultipartSenderDelegate<M, R> sender) {
+        this.messageType = sender.getMessageType();
+
     }
 
-    private static URI createConnectorIdUri(String connectorId) {
-        return URI.create(String.join(
-                IdsIdParser.DELIMITER,
-                IdsIdParser.SCHEME,
-                IdsType.CONNECTOR.getValue(),
-                connectorId));
+    @Override
+    public Class<M> messageType() {
+        return messageType;
     }
 
     /**
@@ -104,16 +95,18 @@ abstract class IdsMultipartSender<M extends RemoteMessage, R> implements IdsMess
      */
     @Override
     public CompletableFuture<R> send(M request, MessageContext context) {
-        var remoteConnectorAddress = retrieveRemoteConnectorAddress(request);
+        var remoteConnectorAddress = request.getConnectorAddress();
 
         // Get Dynamic Attribute Token
         var tokenParameters = TokenParameters.Builder.newInstance()
                 .scope(TOKEN_SCOPE)
                 .audience(remoteConnectorAddress)
                 .build();
+
         var tokenResult = identityService.obtainClientCredentials(tokenParameters);
         if (tokenResult.failed()) {
-            String message = "Failed to obtain token: " + String.join(",", tokenResult.getFailureMessages());
+            String message = "Failed to obtain token: " + String.join(",",
+                    tokenResult.getFailureMessages());
             monitor.severe(message);
             return failedFuture(new EdcException(message));
         }
@@ -202,7 +195,8 @@ abstract class IdsMultipartSender<M extends RemoteMessage, R> implements IdsMess
                 if (r.isSuccessful()) {
                     try (var body = r.body()) {
                         if (body == null) {
-                            future.completeExceptionally(new EdcException("Received an empty body response from connector"));
+                            future.completeExceptionally(new EdcException("Received an empty body" +
+                                    " response from connector"));
                         } else {
                             var parts = extractResponseParts(body);
                             var response = getResponseContent(parts);
@@ -213,7 +207,8 @@ abstract class IdsMultipartSender<M extends RemoteMessage, R> implements IdsMess
                         future.completeExceptionally(e);
                     }
                 } else {
-                    future.completeExceptionally(new EdcException(format("Received an error from connector (%s): %s %s", requestUrl, r.code(), r.message())));
+                    future.completeExceptionally(new EdcException(format("Received an error from " +
+                            "connector (%s): %s %s", requestUrl, r.code(), r.message())));
                 }
                 return null;
             }
@@ -221,67 +216,6 @@ abstract class IdsMultipartSender<M extends RemoteMessage, R> implements IdsMess
 
         return future;
     }
-
-    @NotNull
-    protected IdsTransformerRegistry getTransformerRegistry() {
-        return transformerRegistry;
-    }
-
-    @NotNull
-    protected ObjectMapper getObjectMapper() {
-        return objectMapper;
-    }
-
-    @NotNull
-    protected URI getConnectorId() {
-        return connectorId;
-    }
-
-    /**
-     * Returns the address of the recipient connector, which is the destination for the multipart
-     * message.
-     *
-     * @param request the request.
-     * @return the recipient connector's address.
-     */
-    protected abstract String retrieveRemoteConnectorAddress(M request);
-
-    /**
-     * Builds the IDS multipart header for the request.
-     *
-     * @param request the request.
-     * @param token   the dynamic attribute token.
-     * @return the message header.
-     * @throws Exception if building the message header fails.
-     */
-    protected abstract Message buildMessageHeader(M request, DynamicAttributeToken token) throws Exception;
-
-    /**
-     * Builds the IDS multipart payload for the request.
-     *
-     * @param request the request.
-     * @return the message payload.
-     * @throws Exception if building the message payload fails.
-     */
-    protected String buildMessagePayload(M request) throws Exception {
-        return null;
-    }
-
-    /**
-     * Reads and parses the IDS multipart response.
-     *
-     * @param parts container object for response header and payload {@link InputStream}s.
-     * @return an instance of the sub class's return type.
-     * @throws Exception if parsing the response fails.
-     */
-    protected abstract R getResponseContent(IdsMultipartParts parts) throws Exception;
-
-    /**
-     * Return expected response type.
-     *
-     * @return the response type class.
-     */
-    protected abstract List<Class<? extends Message>> getAllowedResponseTypes();
 
     /**
      * Parses the multipart response. Extracts header and payload as input stream and wraps them

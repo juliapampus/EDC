@@ -38,7 +38,7 @@ import java.net.URI;
 import java.util.Collections;
 import java.util.List;
 
-import static org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.sender.util.ResponseUtil.parseMultipartStringResponse;
+import static org.eclipse.dataspaceconnector.ids.api.multipart.dispatcher.sender.response.ResponseUtil.parseMultipartStringResponse;
 import static org.eclipse.dataspaceconnector.ids.spi.IdsConstants.IDS_WEBHOOK_ADDRESS_PROPERTY;
 
 /**
