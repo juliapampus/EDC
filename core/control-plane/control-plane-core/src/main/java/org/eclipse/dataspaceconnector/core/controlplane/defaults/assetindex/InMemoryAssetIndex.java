@@ -9,6 +9,7 @@
  *
  *  Contributors:
  *       Microsoft Corporation - initial API and implementation
+ *       Fraunhofer Institute for Software and Systems Engineering - criteria validation
  *
  */
 
@@ -58,6 +59,12 @@ public class InMemoryAssetIndex implements AssetIndex {
         // select everything ONLY if the special constant is used
         if (expression == AssetSelectorExpression.SELECT_ALL) {
             return queryAssets(QuerySpec.none());
+        }
+
+        // don't continue if not criteria exist
+        var criteria = expression.getCriteria();
+        if (criteria == null || criteria.isEmpty()) {
+            return Stream.empty();
         }
 
         return queryAssets(QuerySpec.Builder.newInstance().filter(expression.getCriteria()).build());

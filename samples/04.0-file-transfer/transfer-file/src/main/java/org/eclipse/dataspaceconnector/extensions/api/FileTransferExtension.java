@@ -32,6 +32,7 @@ import org.eclipse.dataspaceconnector.spi.types.domain.asset.Asset;
 import org.eclipse.dataspaceconnector.spi.types.domain.contract.offer.ContractDefinition;
 
 import java.nio.file.Path;
+import java.util.List;
 
 public class FileTransferExtension implements ServiceExtension {
 
@@ -102,7 +103,7 @@ public class FileTransferExtension implements ServiceExtension {
                 .accessPolicyId(uid)
                 .contractPolicyId(uid)
                 .selectorExpression(AssetSelectorExpression.Builder.newInstance()
-                        .whenEquals(Asset.PROPERTY_ID, "test-document")
+                        .criteria(List.of())
                         .build())
                 .build();
 

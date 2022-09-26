@@ -102,6 +102,26 @@ class InMemoryAssetIndexTest extends AssetIndexTestBase {
     }
 
     @Test
+    void queryAssets_missingCriteriaList_returnsEmpty() {
+        var testAsset = createAsset("foobar");
+        index.accept(testAsset, createDataAddress(testAsset));
+
+        var assets = index.queryAssets(AssetSelectorExpression.Builder.newInstance().build());
+
+        assertThat(assets).isEmpty();
+    }
+
+    @Test
+    void queryAssets_emptyCriteriaList_returnsEmpty() {
+        var testAsset = createAsset("foobar");
+        index.accept(testAsset, createDataAddress(testAsset));
+
+        var assets = index.queryAssets(AssetSelectorExpression.Builder.newInstance().criteria(List.of()).build());
+
+        assertThat(assets).isEmpty();
+    }
+
+    @Test
     void findById() {
         String id = UUID.randomUUID().toString();
         var testAsset = createAsset("barbaz", id);

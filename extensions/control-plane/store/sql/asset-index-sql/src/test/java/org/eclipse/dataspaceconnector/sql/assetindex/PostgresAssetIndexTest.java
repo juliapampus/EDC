@@ -58,7 +58,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 
-@PostgresqlDbIntegrationTest
+//@PostgresqlDbIntegrationTest
 class PostgresAssetIndexTest extends AssetIndexTestBase {
     protected static final String DATASOURCE_NAME = "asset";
     private static final String POSTGRES_USER = "postgres";
@@ -146,6 +146,24 @@ class PostgresAssetIndexTest extends AssetIndexTestBase {
     @Test
     void verifyCorrectJsonOperator() {
         assertThat(sqlStatements.getFormatAsJsonOperator()).isEqualTo("::json");
+    }
+
+    @Test
+    void queryAssets_missingCriteriaList_returnsEmpty() {
+        createAssets(1);
+
+        var assets = sqlAssetIndex.queryAssets(AssetSelectorExpression.Builder.newInstance().build());
+
+        assertThat(assets).isEmpty();
+    }
+
+    @Test
+    void queryAssets_emptyCriteriaList_returnsEmpty() {
+        createAssets(1);
+
+        var assets = sqlAssetIndex.queryAssets(AssetSelectorExpression.Builder.newInstance().criteria(List.of()).build());
+
+        assertThat(assets).isEmpty();
     }
 
     @Test
