@@ -38,7 +38,7 @@ include(":core:common:policy-evaluator")
 include(":core:common:state-machine")
 include(":core:common:util")
 
-include(":core:control-plane:contract")
+include(":core:control-plane:contract-core")
 include(":core:control-plane:control-plane-core")
 include(":core:control-plane:transfer-core")
 

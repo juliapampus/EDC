@@ -8,7 +8,7 @@ org.eclipse.dataspaceconnector:policy-engine:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:policy-evaluator:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:state-machine:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:util:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:contract:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:contract-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:control-plane-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:transfer-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-core:0.0.1-SNAPSHOT
