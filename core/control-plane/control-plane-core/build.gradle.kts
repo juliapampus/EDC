@@ -22,7 +22,7 @@ dependencies {
     api(project(":core:common:boot"))
     api(project(":core:common:policy-engine"))
     api(project(":core:control-plane:contract"))
-    api(project(":core:control-plane:transfer"))
+    api(project(":core:control-plane:transfer-core"))
     implementation(project(":core:common:util"))
     testImplementation(testFixtures(project(":spi:common:core-spi")))
     testImplementation(testFixtures(project(":spi:control-plane:contract-spi")))
