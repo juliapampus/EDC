@@ -84,6 +84,6 @@
   - [Tests](data-plane/integration-tests/)
 - Data Plane Selector
   - [API](data-plane-selector/data-plane-selector-api/)
-  - [Client](data-plane-selector/selector-client/)
+  - [Client](data-plane-selector/data-plane-selector-client/)
 - Federated Catalog
   - [FCC Node Directory Cosmos](federated-catalog/store/fcc-node-directory-cosmos/)

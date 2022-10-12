@@ -24,7 +24,7 @@ dependencies {
     implementation(project(":extensions:data-plane:data-plane-azure-storage"))
     implementation(project(":extensions:data-plane:data-plane-s3"))
     implementation(project(":extensions:control-plane:data-plane-transfer:data-plane-transfer-client"))
-    implementation(project(":extensions:data-plane-selector:selector-client"))
+    implementation(project(":extensions:data-plane-selector:data-plane-selector-client"))
     implementation(project(":core:data-plane-selector:data-plane-selector-core"))
 
     implementation("io.opentelemetry:opentelemetry-extension-annotations:${openTelemetryVersion}")

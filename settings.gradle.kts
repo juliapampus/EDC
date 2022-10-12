@@ -138,7 +138,7 @@ include(":extensions:data-plane:data-plane-s3")
 include(":extensions:data-plane:integration-tests")
 
 include(":extensions:data-plane-selector:data-plane-selector-api")
-include(":extensions:data-plane-selector:selector-client")
+include(":extensions:data-plane-selector:data-plane-selector-client")
 
 include(":extensions:federated-catalog:store:fcc-node-directory-cosmos")
 
