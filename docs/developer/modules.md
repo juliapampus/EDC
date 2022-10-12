@@ -56,7 +56,7 @@ org.eclipse.dataspaceconnector:data-plane-spi:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-selector-spi:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:federated-catalog-spi:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:api-core:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:observability-api:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:api-observability:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:auth-basic:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:auth-tokenbased:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:aws-test:0.0.1-SNAPSHOT
