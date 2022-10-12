@@ -27,7 +27,7 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:${okHttpVersion}")
 
     testImplementation(project(":extensions:common:http"))
-    testImplementation(project(":extensions:data-plane-selector:selector-api"))
+    testImplementation(project(":extensions:data-plane-selector:data-plane-selector-api"))
     testImplementation(project(":extensions:common:api:api-core"))
 
     testImplementation(project(":extensions:common:junit"))

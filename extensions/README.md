@@ -83,7 +83,7 @@
   - [S3](data-plane/data-plane-s3/)
   - [Tests](data-plane/integration-tests/)
 - Data Plane Selector
-  - [API](data-plane-selector/selector-api/)
+  - [API](data-plane-selector/data-plane-selector-api/)
   - [Client](data-plane-selector/selector-client/)
 - Federated Catalog
   - [FCC Node Directory Cosmos](federated-catalog/store/fcc-node-directory-cosmos/)

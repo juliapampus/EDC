@@ -28,7 +28,7 @@ dependencies {
     implementation(project(":extensions:control-plane:data-plane-transfer:data-plane-transfer-sync"))
 
     implementation(project(":core:data-plane-selector:data-plane-selector-core"))
-    implementation(project(":extensions:data-plane-selector:selector-api"))
+    implementation(project(":extensions:data-plane-selector:data-plane-selector-api"))
     implementation(project(":extensions:data-plane-selector:selector-client"))
 
     implementation(project(":extensions:control-plane:provision:http-provisioner"))
