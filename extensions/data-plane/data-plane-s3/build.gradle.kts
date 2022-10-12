@@ -23,7 +23,7 @@ plugins {
 dependencies {
     api(project(":spi:data-plane:data-plane-spi"))
     implementation(project(":core:common:util"))
-    implementation(project(":extensions:common:aws:s3-core"))
+    implementation(project(":extensions:common:aws:aws-s3-core"))
 
     implementation("dev.failsafe:failsafe:${failsafeVersion}")
 

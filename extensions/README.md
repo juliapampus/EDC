@@ -8,7 +8,7 @@
       - [Basic](common/auth/auth-basic/)
       - [Token-based](common/auth/auth-tokenbased/)
     - AWS
-      - [S3 Core](common/aws/s3-core/)
+      - [S3 Core](common/aws/aws-s3-core/)
       - [Test](common/aws/aws-s3-test/)
     - Azure
       - [Blob Core](common/azure/blob-core/)

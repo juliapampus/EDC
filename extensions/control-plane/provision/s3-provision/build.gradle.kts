@@ -18,7 +18,7 @@ plugins {
 
 dependencies {
     api(project(":spi:control-plane:control-plane-spi"))
-    api(project(":extensions:common:aws:s3-core"))
+    api(project(":extensions:common:aws:aws-s3-core"))
 
     testImplementation(testFixtures(project(":extensions:common:aws:aws-s3-test")))
 }
