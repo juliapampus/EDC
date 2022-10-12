@@ -44,8 +44,8 @@ dependencies {
 
 publishing {
     publications {
-        create<MavenPublication>("core-base") {
-            artifactId = "core-base"
+        create<MavenPublication>("base") {
+            artifactId = "base"
             from(components["java"])
         }
     }
