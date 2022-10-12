@@ -59,7 +59,7 @@ org.eclipse.dataspaceconnector:api-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:api-observability:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:auth-basic:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:auth-tokenbased:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:aws-test:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:aws-s3-test:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:s3-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:azure-eventgrid:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:azure-resource-manager:0.0.1-SNAPSHOT

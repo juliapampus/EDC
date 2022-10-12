@@ -9,7 +9,7 @@
       - [Token-based](common/auth/auth-tokenbased/)
     - AWS
       - [S3 Core](common/aws/s3-core/)
-      - [Test](common/aws/aws-test/)
+      - [Test](common/aws/aws-s3-test/)
     - Azure
       - [Blob Core](common/azure/blob-core/)
       - [Cosmos Common](common/azure/cosmos-common/)
