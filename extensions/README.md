@@ -78,7 +78,7 @@
 - Data Plane
   - [API](data-plane/data-plane-api/)
   - [Azure Storage](data-plane/data-plane-azure-storage/)
-  - [Data Factory](data-plane/data-plane-data-factory/)
+  - [Data Factory](data-plane/data-plane-azure-data-factory/)
   - [HTTP](data-plane/data-plane-http/)
   - [S3](data-plane/data-plane-s3/)
   - [Tests](data-plane/integration-tests/)

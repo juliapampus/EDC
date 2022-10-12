@@ -33,7 +33,7 @@ dependencies {
     implementation(project(":extensions:control-plane:data-plane-transfer:data-plane-transfer-client"))
     implementation(project(":extensions:data-plane-selector:data-plane-selector-client"))
     implementation(project(":core:data-plane-selector:data-plane-selector-core"))
-    implementation(project(":extensions:data-plane:data-plane-data-factory"))
+    implementation(project(":extensions:data-plane:data-plane-azure-data-factory"))
     implementation(project(":extensions:common:azure:azure-resource-manager"))
     implementation(project(":extensions:common:api:observability"))
     implementation(project(":extensions:common:configuration:filesystem-configuration"))

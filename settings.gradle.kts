@@ -132,7 +132,7 @@ include(":extensions:control-plane:store:sql:transfer-process-store-sql")
 
 include(":extensions:data-plane:data-plane-api")
 include(":extensions:data-plane:data-plane-azure-storage")
-include(":extensions:data-plane:data-plane-data-factory")
+include(":extensions:data-plane:data-plane-azure-data-factory")
 include(":extensions:data-plane:data-plane-http")
 include(":extensions:data-plane:data-plane-s3")
 include(":extensions:data-plane:integration-tests")

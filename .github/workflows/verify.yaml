@@ -431,7 +431,7 @@ jobs:
           AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
         with:
           command: |
-            ./gradlew -p extensions/data-plane/data-plane-data-factory test -DincludeTags="AzureDataFactoryIntegrationTest"
+            ./gradlew -p extensions/data-plane/data-plane-azure-data-factory test -DincludeTags="AzureDataFactoryIntegrationTest"
             ./gradlew -p system-tests/azure-data-factory-tests test -DincludeTags="AzureDataFactoryIntegrationTest"
 
       - name: "Publish Gatling report"
