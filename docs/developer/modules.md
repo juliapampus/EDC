@@ -22,7 +22,7 @@ org.eclipse.dataspaceconnector:ids-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:ids-jsonld-serdes:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:ids-spi:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:ids-token-validation:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:ids-api-transform-v1:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:ids-transform-v1:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:http:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:junit:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:core-micrometer:0.0.1-SNAPSHOT
