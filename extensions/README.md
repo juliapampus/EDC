@@ -3,7 +3,7 @@
 - Common
     - API
       - [Core](common/api/api-core/)
-      - [Observability](common/api/observability/)
+      - [Observability](common/api/api-observability/)
     - Auth
       - [Basic](common/auth/auth-basic/)
       - [Token-based](common/auth/auth-tokenbased/)

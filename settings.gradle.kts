@@ -61,7 +61,7 @@ include(":data-protocols:ids:ids-transform-v1")
 
 // modules for technology- or cloud-provider extensions --------------------------------------------
 include(":extensions:common:api:api-core")
-include(":extensions:common:api:observability")
+include(":extensions:common:api:api-observability")
 include(":extensions:common:auth:auth-basic")
 include(":extensions:common:auth:auth-tokenbased")
 include(":extensions:common:aws:aws-test")

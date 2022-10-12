@@ -34,7 +34,7 @@ dependencies {
 
     implementation(project(":spi:data-plane:data-plane-spi"))
 
-    implementation(project(":extensions:common:api:observability"))
+    implementation(project(":extensions:common:api:api-observability"))
 
     implementation(project(":extensions:common:configuration:filesystem-configuration"))
     implementation(project(":extensions:common:iam:iam-mock"))

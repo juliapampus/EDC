@@ -25,7 +25,7 @@ dependencies {
     api("com.squareup.okhttp3:okhttp:${okHttpVersion}")
     api("io.micrometer:micrometer-core:${micrometerVersion}")
 
-    testImplementation(project(":extensions:common:api:observability"))
+    testImplementation(project(":extensions:common:api:api-observability"))
     testImplementation(testFixtures(project(":extensions:common:azure:azure-test")))
     testImplementation(project(":extensions:common:junit"))
     testImplementation(testFixtures(project(":core:common:util")))

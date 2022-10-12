@@ -35,7 +35,7 @@ dependencies {
     implementation("jakarta.ws.rs:jakarta.ws.rs-api:${rsApi}")
     implementation("io.opentelemetry:opentelemetry-extension-annotations:${openTelemetryVersion}")
 
-    implementation(project(":extensions:common:api:observability"))
+    implementation(project(":extensions:common:api:api-observability"))
 
     implementation(project(":extensions:common:configuration:filesystem-configuration"))
     implementation(project(":extensions:common:iam:iam-mock"))

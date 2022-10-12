@@ -4,7 +4,7 @@ This API exposes information about this runtime's health status by accessing the
 to use it add the following line to your `build.gradle[.kts]`:
 
 ```kotlin
-implementation(project(":extensions:common:api:observability"))
+implementation(project(":extensions:common:api:api-observability"))
 // or using maven artifacts in downstream projects:
 implementation("org.eclipse.dataspaceconnector:api-observability:${EDC_VERSION}")
 ```

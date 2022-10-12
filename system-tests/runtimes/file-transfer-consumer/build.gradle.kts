@@ -27,7 +27,7 @@ dependencies {
     implementation(project(":data-protocols:ids"))
 
     implementation(project(":extensions:control-plane:api:data-management"))
-    implementation(project(":extensions:common:api:observability"))
+    implementation(project(":extensions:common:api:api-observability"))
     implementation(project(":extensions:common:configuration:filesystem-configuration"))
     implementation(project(":extensions:common:iam:iam-mock"))
 
