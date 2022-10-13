@@ -30,7 +30,7 @@ dependencies {
     implementation(project(":extensions:common:vault:filesystem-vault"))
 
     implementation(project(":extensions:common:iam:oauth2:oauth2-core"))
-    implementation(project(":extensions:common:iam:oauth2:daps"))
+    implementation(project(":extensions:common:iam:oauth2:oauth2-daps"))
 
     implementation(project(":extensions:control-plane:api:data-management"))
 

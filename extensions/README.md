@@ -26,7 +26,7 @@
       - [Jetty](common/http/jetty-core/)
       - [Jetty Micrometer](common/http/jetty-micrometer/)
     - IAM
-      - [DAPS](common/iam/oauth2/daps/)
+      - [DAPS](common/iam/oauth2/oauth2-daps/)
       - [Decentralized Identity](common/iam/decentralized-identity/)
       - [OAuth2](common/iam/oauth2/oauth2-core/)
     - [JUnit](common/junit/)

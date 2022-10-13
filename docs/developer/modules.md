@@ -96,8 +96,8 @@ org.eclipse.dataspaceconnector:identity-did-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:identity-did-crypto:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:identity-did-service:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:identity-did-web:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:iam-daps:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:oauth2-core:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:oauth2-daps:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:apache-commons-pool-sql:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:api-configuration:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:asset-api:0.0.1-SNAPSHOT
