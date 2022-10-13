@@ -80,7 +80,7 @@
   - [Azure Storage](data-plane/data-plane-azure-storage/)
   - [Data Factory](data-plane/data-plane-azure-data-factory/)
   - [HTTP](data-plane/data-plane-http/)
-  - [S3](data-plane/data-plane-s3/)
+  - [S3](data-plane/data-plane-aws-s3/)
   - [Tests](data-plane/integration-tests/)
 - Data Plane Selector
   - [API](data-plane-selector/data-plane-selector-api/)

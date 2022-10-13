@@ -50,6 +50,6 @@ All of them should extend the `base-core` module. The `defaults` module would pr
 
 This component separation will be put in place also in the `extensions` folder, as some extensions are needed only by one of the components, for example:
 - `control-plane`: data management api, provisioners (s3, blobstorage, http...), "stores" sql/cosmos implementations (for assets, contracts, transfer process, policies...), data-plane-selector client, ...
-- `data-plane`: implementations of the source/sink interfaces like `data-plane-http`, `data-plane-s3`, etc.., data plane specific api (`data-plane-api` module)
+- `data-plane`: implementations of the source/sink interfaces like `data-plane-http`, `data-plane-aws-s3`, etc.., data plane specific api (`data-plane-api` module)
 - `data-plane-selector`: implementations of the `DataPlaneInstanceStore`
 - common (needed by more than one component): observability api, vault, configuration, http, loggers, iam, ...

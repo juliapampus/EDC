@@ -28,10 +28,10 @@ org.eclipse.dataspaceconnector:junit:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-transfer:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:http-receiver:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-api:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:data-plane-aws-s3:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-azure-data-factory:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-azure-storage:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-http:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:data-plane-s3:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-selector-api:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-selector-client:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:auth-spi:0.0.1-SNAPSHOT
