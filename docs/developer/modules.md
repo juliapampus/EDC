@@ -25,7 +25,6 @@ org.eclipse.dataspaceconnector:ids-token-validation:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:ids-transform-v1:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:http:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:junit:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:core-micrometer:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-transfer:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:http-receiver:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-api:0.0.1-SNAPSHOT
@@ -75,6 +74,7 @@ org.eclipse.dataspaceconnector:jetty:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:jetty-micrometer:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:decentralized-identity:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:iam-mock:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:micrometer-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:jdk-logger-monitor:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:common-sql:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:lease-sql:0.0.1-SNAPSHOT
