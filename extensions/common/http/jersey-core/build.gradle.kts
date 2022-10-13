@@ -45,8 +45,8 @@ dependencies {
 
 publishing {
     publications {
-        create<MavenPublication>("jersey") {
-            artifactId = "jersey"
+        create<MavenPublication>("jersey-core") {
+            artifactId = "jersey-core"
             from(components["java"])
         }
     }

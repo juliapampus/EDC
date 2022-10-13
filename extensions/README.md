@@ -21,7 +21,7 @@
     - Events
       - [Cloud HTTP](common/events/cloudevents-http/)
     - HTTP
-      - [Jersey](common/http/jersey/)
+      - [Jersey](common/http/jersey-core/)
       - [Jersey Micrometer](common/http/jersey-micrometer/)
       - [Jetty](common/http/jetty/)
       - [Jetty Micrometer](common/http/jetty-micrometer/)
