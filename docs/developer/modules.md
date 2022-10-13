@@ -60,10 +60,10 @@ org.eclipse.dataspaceconnector:auth-basic:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:auth-tokenbased:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:aws-s3-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:aws-s3-test:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:azure-blob-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:azure-eventgrid:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:azure-resource-manager:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:azure-test:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:blob-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:cosmos-common:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:filesystem-configuration:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:cloudevents-http:0.0.1-SNAPSHOT

@@ -22,13 +22,13 @@ plugins {
 
 dependencies {
     api(project(":spi:data-plane:data-plane-spi"))
-    api(project(":extensions:common:azure:blob-core"))
+    api(project(":extensions:common:azure:azure-blob-core"))
     implementation(project(":core:common:util"))
     implementation("com.azure:azure-storage-blob:${storageBlobVersion}")
     implementation("dev.failsafe:failsafe:${failsafeVersion}")
 
     testImplementation(testFixtures(project(":extensions:common:azure:azure-test")))
-    testImplementation(testFixtures(project(":extensions:common:azure:blob-core")))
+    testImplementation(testFixtures(project(":extensions:common:azure:azure-blob-core")))
 
 }
 

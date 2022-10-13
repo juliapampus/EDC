@@ -27,7 +27,7 @@ dependencies {
     implementation("com.azure:azure-storage-blob:${storageBlobVersion}")
     implementation(project(":core:common:util"))
 
-    testFixturesApi(project(":extensions:common:azure:blob-core"))
+    testFixturesApi(project(":extensions:common:azure:azure-blob-core"))
     testFixturesImplementation(project(":core:common:util"))
 
     testFixturesImplementation("org.junit.jupiter:junit-jupiter-api:${jupiterVersion}")
@@ -36,8 +36,8 @@ dependencies {
 
 publishing {
     publications {
-        create<MavenPublication>("blob-core") {
-            artifactId = "blob-core"
+        create<MavenPublication>("azure-blob-core") {
+            artifactId = "azure-blob-core"
             from(components["java"])
         }
     }
