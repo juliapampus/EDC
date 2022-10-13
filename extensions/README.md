@@ -23,7 +23,7 @@
     - HTTP
       - [Jersey](common/http/jersey-core/)
       - [Jersey Micrometer](common/http/jersey-micrometer/)
-      - [Jetty](common/http/jetty/)
+      - [Jetty](common/http/jetty-core/)
       - [Jetty Micrometer](common/http/jetty-micrometer/)
     - IAM
       - [DAPS](common/iam/oauth2/daps/)

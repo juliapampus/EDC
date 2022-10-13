@@ -40,8 +40,8 @@ dependencies {
 
 publishing {
     publications {
-        create<MavenPublication>("jetty") {
-            artifactId = "jetty"
+        create<MavenPublication>("jetty-core") {
+            artifactId = "jetty-core"
             from(components["java"])
         }
     }

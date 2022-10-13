@@ -70,7 +70,7 @@ org.eclipse.dataspaceconnector:cloudevents-http:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:gcp-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:jersey-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:jersey-micrometer:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:jetty:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:jetty-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:jetty-micrometer:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:decentralized-identity:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:iam-mock:0.0.1-SNAPSHOT

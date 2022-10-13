@@ -24,7 +24,7 @@ val rsApi: String by project
 
 dependencies {
     api(project(":spi:common:web-spi"))
-    api(project(":extensions:common:http:jetty"))
+    api(project(":extensions:common:http:jetty-core"))
 
     implementation("org.glassfish.jersey.core:jersey-server:${jerseyVersion}")
     implementation("org.glassfish.jersey.containers:jersey-container-servlet-core:${jerseyVersion}")
