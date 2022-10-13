@@ -12,7 +12,7 @@
       - [Test](common/aws/aws-s3-test/)
     - Azure
       - [Blob Core](common/azure/azure-blob-core/)
-      - [Cosmos Common](common/azure/cosmos-common/)
+      - [Cosmos Common](common/azure/azure-cosmos-core/)
       - [Event Grid](common/azure/azure-eventgrid/)
       - [Resource Manager](common/azure/azure-resource-manager/)
       - [Test](common/azure/azure-test/)

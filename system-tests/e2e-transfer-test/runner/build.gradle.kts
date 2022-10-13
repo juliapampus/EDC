@@ -29,7 +29,7 @@ dependencies {
     testImplementation(project(":extensions:common:junit"))
     testImplementation(testFixtures(project(":core:common:util")))
     testImplementation(testFixtures(project(":extensions:common:azure:azure-test")))
-    testImplementation(testFixtures(project(":extensions:common:azure:cosmos-common")))
+    testImplementation(testFixtures(project(":extensions:common:azure:azure-cosmos-core")))
     testImplementation(testFixtures(project(":extensions:common:sql:common-sql")))
     testImplementation(project(":extensions:common:junit"))
 

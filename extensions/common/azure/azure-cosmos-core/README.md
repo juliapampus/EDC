@@ -11,7 +11,7 @@ e.g. `assetindex-cosmos` or `policy-store-cosmos`. Those submodules should conta
 store as well as a `ServiceExtension` implementor that registers the store.
 
 Furthermore there is some common code, such as SQL statement interpreters and -converters, the "leasing" mechanism (see
-[Pessimistic Locking](README.md#pessimistic-locking)), which is located in the `cosmos-common` module.
+[Pessimistic Locking](README.md#pessimistic-locking)), which is located in the `azure-cosmos-core` module.
 
 ## Why the `CosmosDbApi`?
 
@@ -58,7 +58,7 @@ are stored procedures involved.
 
 ## SQL statement creation
 
-CosmosDB offers an SQL-like API, which we use for queries. The `cosmos-common` module offers an easy way to fluently
+CosmosDB offers an SQL-like API, which we use for queries. The `azure-cosmos-core` module offers an easy way to fluently
 create SQL statements from a `Criterion`, or rather, a `List<Criterion>`. The entrypoint to every SQL statement should
 be the `SqlStatement`
 class ([here](src/main/java/org/eclipse/dataspaceconnector/azure/cosmos/dialect/SqlStatement.java)).
@@ -121,7 +121,7 @@ re-leased.
 implementations provided by EDC won't work! Most likely logs will show repeated 404 errors.**
 
 Currently, there are two different stored procedures available for use. Both are written in Javascript and are
-provided as resources in the `cosmos-common` module.
+provided as resources in the `azure-cosmos-core` module.
 
 - [lease.js](src/main/resources/lease.js): used for explicit leases. Simply updates the `lease` property
   of a `LeaseableCosmosDocument`.

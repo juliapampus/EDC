@@ -20,7 +20,7 @@ space as the database. More about stored procedures in Cosmos DB: [stored proced
 
 Cosmos DB stores are using 2 stored procedures that handle the lease logic:
 
-1. [`lease.js`](/extensions/azure/cosmos/cosmos-common/src/main/resources/lease.js) - queries the database to look for an item and if an item is found applies a lease on it. It's used to acquire the lock on single item in the database before an update and to remove the lock after.
+1. [`lease.js`](/extensions/azure/cosmos/azure-cosmos-core/src/main/resources/lease.js) - queries the database to look for an item and if an item is found applies a lease on it. It's used to acquire the lock on single item in the database before an update and to remove the lock after.
 
 ```java
    leaseContext.acquireLease(process.getId());
@@ -28,6 +28,6 @@ Cosmos DB stores are using 2 stored procedures that handle the lease logic:
    leaseContext.breakLease(process.getId());
 ```
 
-1. [`nextForState.js`](/extensions/azure/cosmos/cosmos-common/src/main/resources/nextForState.js) - queries the database to look for all items that has no lease or expired lease. It applies a new lease on all returned items. This stored procedure is used to get a batch of elements that are next to be processed for given state.
+1. [`nextForState.js`](/extensions/azure/cosmos/azure-cosmos-core/src/main/resources/nextForState.js) - queries the database to look for all items that has no lease or expired lease. It applies a new lease on all returned items. This stored procedure is used to get a batch of elements that are next to be processed for given state.
 
 More about stored procedures in Cosmos DB: [stored procedures doc](https://docs.microsoft.com/rest/api/cosmos-db/stored-procedures).

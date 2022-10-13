@@ -36,8 +36,8 @@ dependencies {
 
 publishing {
     publications {
-        create<MavenPublication>("cosmos-common") {
-            artifactId = "cosmos-common"
+        create<MavenPublication>("azure-cosmos-core") {
+            artifactId = "azure-cosmos-core"
             from(components["java"])
         }
     }

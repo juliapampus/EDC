@@ -22,7 +22,7 @@ dependencies {
     api(project(":extensions:control-plane:store:cosmos:contract-definition-store-cosmos"))
     api(project(":extensions:control-plane:store:cosmos:contract-negotiation-store-cosmos"))
     api(project(":extensions:control-plane:store:cosmos:policy-store-cosmos"))
-    api(project(":extensions:common:azure:cosmos-common"))
+    api(project(":extensions:common:azure:azure-cosmos-core"))
     api(project(":extensions:control-plane:store:cosmos:transfer-process-store-cosmos"))
 }
 
