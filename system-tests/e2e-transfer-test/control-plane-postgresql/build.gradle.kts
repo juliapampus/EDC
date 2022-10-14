@@ -19,7 +19,7 @@ val postgresVersion: String by project
 
 dependencies {
     implementation(project(":system-tests:e2e-transfer-test:control-plane"))
-    implementation(project(":extensions:control-plane:store:sql:control-plane-sql"))
+    implementation(project(":extensions:control-plane:store:sql:control-plane-store-sql"))
     implementation(project(":extensions:common:sql:pool:apache-commons-pool-sql"))
     implementation(project(":extensions:common:transaction:transaction-local"))
     implementation("org.postgresql:postgresql:${postgresVersion}")

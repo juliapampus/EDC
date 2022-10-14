@@ -69,11 +69,11 @@
       - [Policy](control-plane/store/cosmos/policy-store-cosmos/)
       - [Transfer Process](control-plane/store/cosmos/transfer-process-store-cosmos/)
     - SQL
-        - [Asset Index](control-plane/store/sql/asset-index-sql/)
+        - [Asset Index](control-plane/store/sql/asset-index-store-sql/)
         - [Contract Definition](control-plane/store/sql/contract-definition-store-sql/)
         - [Contract Negotiation](control-plane/store/sql/contract-negotiation-store-sql/)
-        - [Control Plane](control-plane/store/sql/control-plane-sql/)
-        - [Policy](control-plane/store/sql/policy-store-sql/)
+        - [Control Plane](control-plane/store/sql/control-plane-store-sql/)
+        - [Policy](control-plane/store/sql/policy-definition-store-sql/)
         - [Transfer Process](control-plane/store/sql/transfer-process-store-sql/)
 - Data Plane
   - [API](data-plane/data-plane-api/)

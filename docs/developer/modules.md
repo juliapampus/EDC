@@ -113,9 +113,9 @@ org.eclipse.dataspaceconnector:contract-negotiation-store-cosmos:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:control-plane-cosmos:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:policy-store-cosmos:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:transfer-process-store-cosmos:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:asset-index-sql:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:contractdefinition-store-sql:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:contractnegotiation-store-sql:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:control-plane-sql:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:policy-store-sql:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:asset-index-store-sql:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:contract-definition-store-sql:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:contract-negotiation-store-sql:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:control-plane-store-sql:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:policy-definition-store-sql:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:transfer-process-store-sql:0.0.1-SNAPSHOT

@@ -98,10 +98,10 @@ class EndToEndTransferPostgresqlTest extends AbstractEndToEndTransfer {
         PostgresqlLocalInstance.createDatabase(consumer.getName());
 
         var scripts = Stream.of(
-                        "asset-index-sql",
+                        "asset-index-store-sql",
                         "contract-definition-store-sql",
                         "contract-negotiation-store-sql",
-                        "policy-store-sql",
+                        "policy-definition-store-sql",
                         "transfer-process-store-sql")
                 .map(module -> "../../../extensions/control-plane/store/sql/" + module + "/docs/schema.sql")
                 .map(Paths::get)

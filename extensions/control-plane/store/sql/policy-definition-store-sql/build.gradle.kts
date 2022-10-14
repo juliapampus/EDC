@@ -37,8 +37,8 @@ dependencies {
 
 publishing {
     publications {
-        create<MavenPublication>("policy-store-sql") {
-            artifactId = "policy-store-sql"
+        create<MavenPublication>("policy-definition-store-sql") {
+            artifactId = "policy-definition-store-sql"
             from(components["java"])
         }
     }

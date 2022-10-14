@@ -38,8 +38,8 @@ dependencies {
 
 publishing {
     publications {
-        create<MavenPublication>("contractdefinition-store-sql") {
-            artifactId = "contractdefinition-store-sql"
+        create<MavenPublication>("contract-definition-store-sql") {
+            artifactId = "contract-definition-store-sql"
             from(components["java"])
         }
     }

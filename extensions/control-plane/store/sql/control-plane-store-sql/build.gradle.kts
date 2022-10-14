@@ -20,17 +20,17 @@ plugins {
 dependencies {
     implementation(project(":extensions:common:sql:common-sql"))
     implementation(project(":extensions:common:sql:lease-sql"))
-    implementation(project(":extensions:control-plane:store:sql:asset-index-sql"))
+    implementation(project(":extensions:control-plane:store:sql:asset-index-store-sql"))
     implementation(project(":extensions:control-plane:store:sql:contract-definition-store-sql"))
     implementation(project(":extensions:control-plane:store:sql:contract-negotiation-store-sql"))
-    implementation(project(":extensions:control-plane:store:sql:policy-store-sql"))
+    implementation(project(":extensions:control-plane:store:sql:policy-definition-store-sql"))
     implementation(project(":extensions:control-plane:store:sql:transfer-process-store-sql"))
 }
 
 publishing {
     publications {
-        create<MavenPublication>("control-plane-sql") {
-            artifactId = "control-plane-sql"
+        create<MavenPublication>("control-plane-store-sql") {
+            artifactId = "control-plane-store-sql"
             from(components["java"])
         }
     }
