@@ -4,6 +4,6 @@ This group of modules provides the DataManagement API. With this API you can man
 
 ## Authentication
 
-The submodule `:extensions:control-plane:api:data-management:api-configuration` **requires**, that an implementation of the
+The submodule `:extensions:control-plane:api:data-management:data-management-api-configuration` **requires**, that an implementation of the
 `AuthenticationService` interface was registered. Therefor you have to add an authentication module to your dependencies
 (e.g. `:extensions:common:auth:auth-tokenbased` or `:extensions:common:auth:auth-basic`).

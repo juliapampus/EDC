@@ -46,7 +46,7 @@
       - [HashiCorp](common/vault/hashicorp-vault/)
 - Control Plane
   - [Data Management API](control-plane/api/data-management/)
-    - [Configuration](control-plane/api/data-management/api-configuration/)
+    - [Configuration](control-plane/api/data-management/data-management-api-configuration/)
     - [Asset](control-plane/api/data-management/asset-api/)
     - [Catalog](control-plane/api/data-management/catalog-api/)
     - [Contract Agreement](control-plane/api/data-management/contractagreement-api/)

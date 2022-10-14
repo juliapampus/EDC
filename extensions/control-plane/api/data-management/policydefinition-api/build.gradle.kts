@@ -31,7 +31,7 @@ dependencies {
     implementation(project(":core:common:util"))
     implementation(project(":spi:common:policy-model"))
     implementation(project(":extensions:common:api:api-core"))
-    implementation(project(":extensions:control-plane:api:data-management:api-configuration"))
+    implementation(project(":extensions:control-plane:api:data-management:data-management-api-configuration"))
 
     implementation("jakarta.ws.rs:jakarta.ws.rs-api:${rsApi}")
 

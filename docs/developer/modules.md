@@ -99,12 +99,12 @@ org.eclipse.dataspaceconnector:identity-did-web:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:oauth2-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:oauth2-daps:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:apache-commons-pool-sql:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:api-configuration:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:asset-api:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:catalog-api:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:contractagreement-api:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:contractdefinition-api:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:contractnegotiation-api:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:data-management-api-configuration:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:policydefinition-api:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:transferprocess-api:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:assetindex-cosmos:0.0.1-SNAPSHOT

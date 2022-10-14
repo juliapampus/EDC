@@ -102,7 +102,7 @@ include(":extensions:common:vault:filesystem-vault")
 include(":extensions:common:vault:hashicorp-vault")
 
 include(":extensions:control-plane:api:data-management")
-include(":extensions:control-plane:api:data-management:api-configuration")
+include(":extensions:control-plane:api:data-management:data-management-api-configuration")
 include(":extensions:control-plane:api:data-management:asset-api")
 include(":extensions:control-plane:api:data-management:catalog-api")
 include(":extensions:control-plane:api:data-management:contractagreement-api")

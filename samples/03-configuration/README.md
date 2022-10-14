@@ -157,8 +157,8 @@ dependencies {
 }
 ```
 
-As described in the [README.md](../../extensions/control-plane/api/data-management/api-configuration/README.md) of
-the [api-configuration module](../../extensions/control-plane/api/data-management/api-configuration), the management api should be
+As described in the [README.md](../../extensions/control-plane/api/data-management/data-management-api-configuration/README.md) of
+the [api-configuration module](../../extensions/control-plane/api/data-management/data-management-api-configuration), the management api should be
 exposed on a separate jetty context. Therefore, it is necessary to provide the following configuration to the connector:
 
 > Note: The ports could be chosen arbitrarily. In this example, they are aligned to the already existing `web.http.port` setting described above.
