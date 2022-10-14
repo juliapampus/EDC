@@ -9,15 +9,14 @@
  *
  *  Contributors:
  *       Microsoft Corporation - initial API and implementation
+ *       Bayerische Motoren Werke Aktiengesellschaft (BMW AG) - add functionalities
  *
  */
 
-val infoModelVersion: String by project
-val jerseyVersion: String by project
-val okHttpVersion: String by project
 val rsApi: String by project
 val restAssured: String by project
-val awaitility: String by project
+val jerseyVersion: String by project
+
 
 plugins {
     `java-library`
@@ -25,11 +24,8 @@ plugins {
 }
 
 dependencies {
-    api(project(":spi:control-plane:contract-spi"))
-    api(project(":spi:control-plane:policy-spi"))
-    api(project(":spi:common:transaction-spi"))
+    api(project(":spi:control-plane:control-plane-spi"))
     implementation(project(":core:common:util"))
-    implementation(project(":spi:common:policy-model"))
     implementation(project(":extensions:common:api:api-core"))
     implementation(project(":extensions:control-plane:api:data-management-api:data-management-api-configuration"))
 
@@ -37,16 +33,14 @@ dependencies {
 
     testImplementation(project(":core:control-plane:control-plane-core"))
     testImplementation(project(":extensions:common:http"))
-    testImplementation(project(":extensions:common:transaction:transaction-local"))
     testImplementation(project(":extensions:common:junit"))
-    testImplementation("org.awaitility:awaitility:${awaitility}")
     testImplementation("io.rest-assured:rest-assured:${restAssured}")
 }
 
 publishing {
     publications {
-        create<MavenPublication>("policydefinition-api") {
-            artifactId = "policydefinition-api"
+        create<MavenPublication>("contract-agreement-api") {
+            artifactId = "contract-agreement-api"
             from(components["java"])
         }
     }

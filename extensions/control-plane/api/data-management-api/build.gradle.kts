@@ -21,11 +21,11 @@ dependencies {
     api(project(":extensions:control-plane:api:data-management-api:data-management-api-configuration"))
     api(project(":extensions:control-plane:api:data-management-api:asset-api"))
     api(project(":extensions:control-plane:api:data-management-api:catalog-api"))
-    api(project(":extensions:control-plane:api:data-management-api:contractagreement-api"))
-    api(project(":extensions:control-plane:api:data-management-api:contractdefinition-api"))
-    api(project(":extensions:control-plane:api:data-management-api:contractnegotiation-api"))
-    api(project(":extensions:control-plane:api:data-management-api:policydefinition-api"))
-    api(project(":extensions:control-plane:api:data-management-api:transferprocess-api"))
+    api(project(":extensions:control-plane:api:data-management-api:contract-agreement-api"))
+    api(project(":extensions:control-plane:api:data-management-api:contract-definition-api"))
+    api(project(":extensions:control-plane:api:data-management-api:contract-negotiation-api"))
+    api(project(":extensions:control-plane:api:data-management-api:policy-definition-api"))
+    api(project(":extensions:control-plane:api:data-management-api:transfer-process-api"))
 }
 
 publishing {

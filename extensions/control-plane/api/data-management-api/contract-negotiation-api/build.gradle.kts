@@ -1,22 +1,20 @@
 /*
- *  Copyright (c) 2020 - 2022 Microsoft Corporation
+ * Copyright (c) 2022 ZF Friedrichshafen AG
  *
- *  This program and the accompanying materials are made available under the
- *  terms of the Apache License, Version 2.0 which is available at
- *  https://www.apache.org/licenses/LICENSE-2.0
+ * This program and the accompanying materials are made available under the
+ * terms of the Apache License, Version 2.0 which is available at
+ * https://www.apache.org/licenses/LICENSE-2.0
  *
- *  SPDX-License-Identifier: Apache-2.0
+ * SPDX-License-Identifier: Apache-2.0
  *
- *  Contributors:
- *       Microsoft Corporation - initial API and implementation
- *       Bayerische Motoren Werke Aktiengesellschaft (BMW AG) - add functionalities
- *
+ * Contributors:
+ *   ZF Friedrichshafen AG - Initial API and Implementation
  */
 
-val rsApi: String by project
-val restAssured: String by project
+val awaitility: String by project
 val jerseyVersion: String by project
-
+val restAssured: String by project
+val rsApi: String by project
 
 plugins {
     `java-library`
@@ -25,22 +23,25 @@ plugins {
 
 dependencies {
     api(project(":spi:control-plane:control-plane-spi"))
-    implementation(project(":core:common:util"))
+    api(project(":spi:common:transaction-spi"))
     implementation(project(":extensions:common:api:api-core"))
     implementation(project(":extensions:control-plane:api:data-management-api:data-management-api-configuration"))
 
     implementation("jakarta.ws.rs:jakarta.ws.rs-api:${rsApi}")
 
+    testImplementation(project(":core:common:util"))
     testImplementation(project(":core:control-plane:control-plane-core"))
     testImplementation(project(":extensions:common:http"))
     testImplementation(project(":extensions:common:junit"))
+
     testImplementation("io.rest-assured:rest-assured:${restAssured}")
+    testImplementation("org.awaitility:awaitility:${awaitility}")
 }
 
 publishing {
     publications {
-        create<MavenPublication>("contractagreement-api") {
-            artifactId = "contractagreement-api"
+        create<MavenPublication>("contract-negotiation-api") {
+            artifactId = "contract-negotiation-api"
             from(components["java"])
         }
     }

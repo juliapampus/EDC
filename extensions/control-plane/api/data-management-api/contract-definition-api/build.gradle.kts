@@ -9,11 +9,11 @@
  *
  *  Contributors:
  *       Microsoft Corporation - initial API and implementation
+ *       Bayerische Motoren Werke Aktiengesellschaft (BMW AG)
  *
  */
 
 val awaitility: String by project
-val infoModelVersion: String by project
 val jerseyVersion: String by project
 val restAssured: String by project
 val rsApi: String by project
@@ -24,9 +24,8 @@ plugins {
 }
 
 dependencies {
+    api(project(":spi:control-plane:control-plane-spi"))
     api(project(":spi:common:transaction-spi"))
-    api(project(":spi:control-plane:transfer-spi"))
-    implementation(project(":core:common:util"))
     implementation(project(":extensions:common:api:api-core"))
     implementation(project(":extensions:control-plane:api:data-management-api:data-management-api-configuration"))
 
@@ -35,15 +34,14 @@ dependencies {
     testImplementation(project(":core:control-plane:control-plane-core"))
     testImplementation(project(":extensions:common:http"))
     testImplementation(project(":extensions:common:junit"))
-
     testImplementation("io.rest-assured:rest-assured:${restAssured}")
     testImplementation("org.awaitility:awaitility:${awaitility}")
 }
 
 publishing {
     publications {
-        create<MavenPublication>("transferprocess-api") {
-            artifactId = "transferprocess-api"
+        create<MavenPublication>("contract-definition-api") {
+            artifactId = "contract-definition-api"
             from(components["java"])
         }
     }
