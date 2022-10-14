@@ -107,11 +107,11 @@ org.eclipse.dataspaceconnector:contractnegotiation-api:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-management-api-configuration:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:policydefinition-api:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:transferprocess-api:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:assetindex-cosmos:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:asset-index-store-cosmos:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:contract-definition-store-cosmos:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:contract-negotiation-store-cosmos:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:control-plane-cosmos:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:policy-store-cosmos:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:control-plane-store-cosmos:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:policy-definition-store-cosmos:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:transfer-process-store-cosmos:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:asset-index-store-sql:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:contract-definition-store-sql:0.0.1-SNAPSHOT

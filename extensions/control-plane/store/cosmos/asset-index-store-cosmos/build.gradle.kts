@@ -20,25 +20,23 @@ val cosmosSdkVersion: String by project
 val failsafeVersion: String by project
 
 dependencies {
-    api(project(":spi:control-plane:policy-spi"))
-    implementation(project(":core:common:util"))
-    implementation(project(":extensions:common:azure:azure-cosmos-core"))
+    api(project(":spi:common:core-spi"))
+    api(project(":core:common:util"))
+    api(project(":extensions:common:azure:azure-cosmos-core"))
 
     implementation("com.azure:azure-cosmos:${cosmosSdkVersion}")
     implementation("dev.failsafe:failsafe:${failsafeVersion}")
 
-
-    testImplementation(project(":extensions:common:junit"))
     testImplementation(testFixtures(project(":extensions:common:azure:azure-test")))
-    testImplementation(testFixtures(project(":spi:control-plane:policy-spi")))
+    testImplementation(testFixtures(project(":spi:common:core-spi")))
 
 }
 
 
 publishing {
     publications {
-        create<MavenPublication>("policy-store-cosmos") {
-            artifactId = "policy-store-cosmos"
+        create<MavenPublication>("asset-index-store-cosmos") {
+            artifactId = "asset-index-store-cosmos"
             from(components["java"])
         }
     }

@@ -18,6 +18,6 @@ plugins {
 
 dependencies {
     implementation(project(":system-tests:e2e-transfer-test:control-plane"))
-    implementation(project(":extensions:control-plane:store:cosmos:control-plane-cosmos"))
+    implementation(project(":extensions:control-plane:store:cosmos:control-plane-store-cosmos"))
     implementation(testFixtures(project(":extensions:common:azure:azure-test")))
 }

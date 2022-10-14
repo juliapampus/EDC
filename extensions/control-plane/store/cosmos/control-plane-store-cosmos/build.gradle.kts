@@ -18,18 +18,18 @@ plugins {
 
 //This file serves as BOM for cosmos db for control plane
 dependencies {
-    api(project(":extensions:control-plane:store:cosmos:assetindex-cosmos"))
+    api(project(":extensions:control-plane:store:cosmos:asset-index-store-cosmos"))
     api(project(":extensions:control-plane:store:cosmos:contract-definition-store-cosmos"))
     api(project(":extensions:control-plane:store:cosmos:contract-negotiation-store-cosmos"))
-    api(project(":extensions:control-plane:store:cosmos:policy-store-cosmos"))
+    api(project(":extensions:control-plane:store:cosmos:policy-definition-store-cosmos"))
     api(project(":extensions:common:azure:azure-cosmos-core"))
     api(project(":extensions:control-plane:store:cosmos:transfer-process-store-cosmos"))
 }
 
 publishing {
     publications {
-        create<MavenPublication>("control-plane-cosmos") {
-            artifactId = "control-plane-cosmos"
+        create<MavenPublication>("control-plane-store-cosmos") {
+            artifactId = "control-plane-store-cosmos"
             from(components["java"])
         }
     }

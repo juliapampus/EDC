@@ -84,7 +84,7 @@ in an environment that's not your local machine.
 Currently, there are two different database extensions for the control-plane:
 
 - `control-plane-store-sql`: Sql database ([postgresql](https://www.postgresql.org/) is the only dialect currently supported)
-- `control-plane-cosmos`: [Microsoft CosmosDB](https://azure.microsoft.com/products/cosmos-db) database
+- `control-plane-store-cosmos`: [Microsoft CosmosDB](https://azure.microsoft.com/products/cosmos-db) database
 
 ### Setting data-plane
 
