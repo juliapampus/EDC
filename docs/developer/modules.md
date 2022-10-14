@@ -91,10 +91,10 @@ org.eclipse.dataspaceconnector:gcs-provision:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:http-provision:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:s3-provision:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:fcc-node-directory-cosmos:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:identity-common-test:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:identity-did-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:identity-did-crypto:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:identity-did-service:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:identity-did-test:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:identity-did-web:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:oauth2-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:oauth2-daps:0.0.1-SNAPSHOT

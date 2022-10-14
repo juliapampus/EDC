@@ -14,8 +14,8 @@ dependencies {
 
 publishing {
     publications {
-        create<MavenPublication>("identity-common-test") {
-            artifactId = "identity-common-test"
+        create<MavenPublication>("identity-did-test") {
+            artifactId = "identity-did-test"
             from(components["java"])
         }
     }
