@@ -14,7 +14,7 @@ org.eclipse.dataspaceconnector:transfer-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-framework:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-selector-core:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:catalog-cache:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:federated-catalog-core:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:ids-api-configuration:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:ids-api-multipart-dispatcher-v1:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:ids-api-multipart-endpoint-v1:0.0.1-SNAPSHOT

@@ -47,8 +47,8 @@ dependencies {
 
 publishing {
     publications {
-        create<MavenPublication>("catalog-cache") {
-            artifactId = "catalog-cache"
+        create<MavenPublication>("federated-catalog-core") {
+            artifactId = "federated-catalog-core"
             from(components["java"])
         }
     }
