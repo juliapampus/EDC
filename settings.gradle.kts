@@ -135,7 +135,7 @@ include(":extensions:data-plane:data-plane-azure-storage")
 include(":extensions:data-plane:data-plane-azure-data-factory")
 include(":extensions:data-plane:data-plane-http")
 include(":extensions:data-plane:data-plane-aws-s3")
-include(":extensions:data-plane:integration-tests")
+include(":extensions:data-plane:data-plane-integration-tests")
 
 include(":extensions:data-plane-selector:data-plane-selector-api")
 include(":extensions:data-plane-selector:data-plane-selector-client")

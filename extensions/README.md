@@ -81,7 +81,7 @@
   - [Data Factory](data-plane/data-plane-azure-data-factory/)
   - [HTTP](data-plane/data-plane-http/)
   - [S3](data-plane/data-plane-aws-s3/)
-  - [Tests](data-plane/integration-tests/)
+  - [Tests](data-plane/data-plane-integration-tests/)
 - Data Plane Selector
   - [API](data-plane-selector/data-plane-selector-api/)
   - [Client](data-plane-selector/data-plane-selector-client/)
