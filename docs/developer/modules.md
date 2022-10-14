@@ -88,7 +88,7 @@ org.eclipse.dataspaceconnector:data-plane-transfer-client:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:data-plane-transfer-sync:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:blob-provision:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:gcs-provision:0.0.1-SNAPSHOT
-org.eclipse.dataspaceconnector:http-provisioner:0.0.1-SNAPSHOT
+org.eclipse.dataspaceconnector:http-provision:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:s3-provision:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:fcc-node-directory-cosmos:0.0.1-SNAPSHOT
 org.eclipse.dataspaceconnector:identity-common-test:0.0.1-SNAPSHOT

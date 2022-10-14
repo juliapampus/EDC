@@ -115,7 +115,7 @@ include(":extensions:control-plane:data-plane-transfer:data-plane-transfer-sync"
 include(":extensions:control-plane:http-receiver")
 include(":extensions:control-plane:provision:blob-provision")
 include(":extensions:control-plane:provision:gcs-provision")
-include(":extensions:control-plane:provision:http-provisioner")
+include(":extensions:control-plane:provision:http-provision")
 include(":extensions:control-plane:provision:s3-provision")
 include(":extensions:control-plane:store:cosmos:assetindex-cosmos")
 include(":extensions:control-plane:store:cosmos:contract-definition-store-cosmos")

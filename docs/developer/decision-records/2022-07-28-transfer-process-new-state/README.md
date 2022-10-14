@@ -2,7 +2,7 @@
 
 ## Decision
 
-Since the provisioning phase became "async" with the introduction of the `http-provisioner` extension,
+Since the provisioning phase became "async" with the introduction of the `http-provision` extension,
 there's the need to introduce a new state that describes a transfer process for which the provisioning has been requested
 but it hasn't been completed yet.
 
@@ -11,7 +11,7 @@ but it hasn't been completed yet.
 The classic provision method (see `S3BucketProvisioner` or `ObjectStorageProvisioner`), despite providing `async` interface,
 works in a synchronous way: when the `CompletableFuture` returned by the provisioner completes, this means that the actual
 provisioning process completed and the `StateMachineManager` can fetch that `TransferProcess` and continue its processing.
-The `http-provisioner` works in a different way: when the `CompletableFuture` completes, this means that the provisioning
+The `http-provision` works in a different way: when the `CompletableFuture` completes, this means that the provisioning
 has been requested, but it will be completed in the future. At that point the `TransferProcess` should stay in a state
 that would make the `StateMachineManager` ignore it, as it would be up to the external provisioner to complete the provisioning
 calling back the connector.

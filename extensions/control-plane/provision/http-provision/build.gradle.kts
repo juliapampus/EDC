@@ -45,8 +45,8 @@ dependencies {
 
 publishing {
     publications {
-        create<MavenPublication>("http-provisioner") {
-            artifactId = "http-provisioner"
+        create<MavenPublication>("http-provision") {
+            artifactId = "http-provision"
             from(components["java"])
         }
     }

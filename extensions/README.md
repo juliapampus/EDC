@@ -58,7 +58,7 @@
   - [HTTP Receiver](control-plane/http-receiver/)
   - Provision
     - [Blob](control-plane/provision/blob-provision/)
-    - [HTTP](control-plane/provision/http-provisioner/)
+    - [HTTP](control-plane/provision/http-provision/)
     - [S3](control-plane/provision/s3-provision/)
   - Store
     - Cosmos
